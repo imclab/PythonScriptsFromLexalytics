@@ -1,4 +1,4 @@
-ItalianPOSCorpusXMLTransformer
+PythonScriptsFromLexalytics
 ==============================
 
-A Python program that takes an XML Italian POS corpus and switches it to a different XML structure
+Various Python scripts I have written to help with different projects at Lexalytics
