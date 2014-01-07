@@ -6,7 +6,7 @@ switchable_file_path = 'D:\\SpellCheckProject\\Switchables.csv'
 test_directory_path = 'D:\\SpellCheckProject\\rawTextData\\'
 data_path = 'C:\\Program Files (x86)\\Lexalytics\\data\\'
 license_path = 'C:\\Program Files (x86)\\Lexalytics\\license.v5'
-gold_corrupt_file_path = "D:\\SpellCheckProject\\CorruptedData.txt"
+gold_corrupt_file_path = "D:\\SpellCheckProject\\CorruptedData.csv"
 
 gold_corrupt_file = open(gold_corrupt_file_path, 'w')
 switchable_file = open(switchable_file_path)
@@ -59,4 +59,4 @@ def make_gold_corrupt_pairing(file_path):
 data_pairs = [make_gold_corrupt_pairing('%s%s' % (test_directory_path, filename)) for filename in os.listdir(test_directory_path)]
 
 for (gold, corrupt) in data_pairs:
-	gold_corrupt_file.write('%s\t|\t%s\n' % (gold, corrupt))
+	gold_corrupt_file.write('%s\t%s\n' % (gold, corrupt))
