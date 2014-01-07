@@ -59,4 +59,4 @@ def make_gold_corrupt_pairing(file_path):
 data_pairs = [make_gold_corrupt_pairing('%s%s' % (test_directory_path, filename)) for filename in os.listdir(test_directory_path)]
 
 for (gold, corrupt) in data_pairs:
-	gold_corrupt_file.write('%s\t|\t%s' % (gold, corrupt))
+	gold_corrupt_file.write('%s\t|\t%s\n' % (gold, corrupt))
